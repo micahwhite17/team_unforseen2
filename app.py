@@ -16,7 +16,7 @@ def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
   msg = ''
-  if (data['name'] == 'Micah The Major Prophet') or (data['sender_id'] == 'PUT_SENDER_ID_HERE'): # the bot only mirrors one user
+  if (data['name'] == 'Keaton Immekus') or (data['sender_id'] == '41870459'): # the bot only mirrors one user
     text = data['text']
     time.sleep(1)
     send_message(mock(text))
