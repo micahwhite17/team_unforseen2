@@ -16,7 +16,12 @@ def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
   msg = ''
-  if (data['name'] == 'Keaton Immekus') or (data['sender_id'] == '41870459') or (data['name'] == 'Aaron Leader of the Israelites') or (data['name'] == 'Made in His iMAGe') or (data['sender_id'] == '32642417'):
+  #have Aaron, andres, jason
+  if (data['name'] == 'Keaton Immekus') or (data['sender_id'] == '41870459') or (data['sender_id'] == '39819849') or (data['name'] == 'Made in His iMAGe') or (data['sender_id'] == '32642417'):
+    text = data['text']
+    time.sleep(1)
+    send_message(mock(text))
+  if (data['name'] == 'Grace, God\'s gift to man') or (data['name'] == 'Lauren Bierman') or (data['name'] == 'Because He LIVes'):
     text = data['text']
     time.sleep(1)
     send_message(mock(text))
