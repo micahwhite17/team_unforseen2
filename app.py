@@ -16,13 +16,10 @@ def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
   msg = ''
-  if data['name'] != 'team_unforseen':
-    msg = '{}, you sent "{}".'.format(data['name'], data['text'])
-    send_message(msg)
-  # if (True) or (data['name'] == 'MicahWhite') or (data['sender_id'] == 'PUT_SENDER_ID_HERE'): # the bot only mirrors one user
-	# text = data['text']
-	# time.sleep(1)
-	# send_message(mock(text))
+  if (data['name'] == 'Micah White') or (data['sender_id'] == 'PUT_SENDER_ID_HERE'): # the bot only mirrors one user
+    text = data['text']
+    time.sleep(1)
+    send_message(mock(text))
   return "ok", 200
 
 def mock(text, diversity_bias=0.5, random_seed=None):
