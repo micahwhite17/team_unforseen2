@@ -24,6 +24,10 @@ app = Flask(__name__)
 			text = data['text']
  		    time.sleep(1)
  		    send_message(mock(text))
+		if (data['name'] == 'Micah White'):
+			text = data['text']
+ 		    time.sleep(1)
+ 		    send_message(mock(text))
 	  return "ok", 200
 
 	def mock(text, diversity_bias=0.5, random_seed=None):
