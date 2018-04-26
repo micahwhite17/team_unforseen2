@@ -16,8 +16,8 @@ def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
   msg = ''
-  #have Aaron, andres, jason
-  if (data['name'] == 'Keaton Immekus') or (data['sender_id'] == '41870459') or (data['sender_id'] == '39819849') or (data['name'] == 'Made in His iMAGe') or (data['sender_id'] == '32642417'):
+  #have Aaron, andres, jason, keaton
+  if (data['sender_id'] == '22498083') or (data['sender_id'] == '41870459') or (data['sender_id'] == '39819849') or (data['name'] == 'Made in His iMAGe') or (data['sender_id'] == '32642417'):
     text = data['text']
     time.sleep(1)
     send_message(mock(text))
