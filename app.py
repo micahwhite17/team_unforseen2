@@ -17,11 +17,11 @@ def webhook():
   log('Recieved {}'.format(data))
   msg = ''
   #have Aaron, andres, jason, keaton
-  if (data['sender_id'] == '22498083') or (data['sender_id'] == '41870459') or (data['sender_id'] == '39819849') or (data['name'] == 'Made in His iMAGe') or (data['sender_id'] == '32642417'):
-    text = data['text']
-    time.sleep(1)
-    send_message(mock(text))
-  if (data['name'] == 'Micah The Major Prophet') or (data['name'] == 'Lauren Bierman') or (data['name'] == 'Because He LIVes'):
+  # if (data['sender_id'] == '22498083') or (data['sender_id'] == '41870459') or (data['sender_id'] == '39819849') or (data['name'] == 'Made in His iMAGe') or (data['sender_id'] == '32642417'):
+  #   text = data['text']
+  #   time.sleep(1)
+  #   send_message(mock(text))
+  if (data['name'] == 'Keaton Immekus'):# or (data['name'] == 'Lauren Bierman') or (data['name'] == 'Because He LIVes'):
     text = data['text']
     time.sleep(1)
     send_message(mock(text))
