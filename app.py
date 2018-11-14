@@ -21,7 +21,7 @@ def webhook():
     text = data['text']
     time.sleep(1)
     send_message(mock(text))
-  if (data['name'] == 'Grace, God\'s gift to man') or (data['name'] == 'Lauren Bierman') or (data['name'] == 'Because He LIVes'):
+  if (data['name'] == 'Micah The Major Prophet') or (data['name'] == 'Lauren Bierman') or (data['name'] == 'Because He LIVes'):
     text = data['text']
     time.sleep(1)
     send_message(mock(text))
