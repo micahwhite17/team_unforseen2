@@ -21,10 +21,10 @@ def webhook():
   #   text = data['text']
   #   time.sleep(1)
   #   send_message(mock(text))
-  if (data['name'] == 'Keaton Immekus'):# or (data['name'] == 'Lauren Bierman') or (data['name'] == 'Because He LIVes'):
-    text = data['text']
+  if (data['sender_id'] == '32642417'):# or (data['name'] == 'Lauren Bierman') or (data['name'] == 'Because He LIVes'):
+    #text = data['text']
     time.sleep(1)
-    send_message(mock(text))
+    send_message(mock('Ohio sucks.'))
   return "ok", 200
 
 def mock(text, diversity_bias=0.5, random_seed=None):
