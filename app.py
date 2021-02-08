@@ -10,7 +10,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-ENABLED = False;
+ENABLED = True;
 
 # Webhook
 @app.route('/', methods=['POST'])
@@ -20,7 +20,7 @@ def webhook():
 	  log('Recieved {}'.format(data))
 	  msg = ''
 	  #have Aaron, andres, jason, keaton
-	  if (data['sender_id'] == '22498083'):
+	  if (data['name'] == 'Worlds BIGGEST Chiefs Fan'):
 	    text = data['text']
 	    time.sleep(1)
 	    send_message(mock(text))
