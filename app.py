@@ -59,8 +59,8 @@ def send_message(msg, att):
          'attachments' : [{'type': 'image', 'url' : 'https://i.groupme.com/750x942.jpeg.92cf28a3cb4a499baeb242f12d0f1a21'}],
          }
   print(data)
-  #request = Request(url, urlencode(data).encode())
-  #json = urlopen(request).read().decode()
+  request = Request(url, urlencode(data).encode())
+  json = urlopen(request).read().decode()
 
 def log(msg):
   print(str(msg))
