@@ -20,9 +20,9 @@ def webhook():
 	  log('Recieved {}'.format(data))
 	  msg = ''
 	  text = data['text']
-          att = data['attachments']
-          print(data['attachments'])
-          img = data['attachments'][0]['url']
+	  att = data['attachments']
+	  print(data['attachments'])
+	  img = data['attachments'][0]['url']
 	  print(img)
 	  time.sleep(1)
 	  #if (data['sender_id'] == '35832035'):
