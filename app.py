@@ -22,7 +22,9 @@ def webhook():
 	  #have Aaron, andres, jason, keaton
 	  if (data['sender_id'] == '35832035'):
 	    text = data['text']
-	    att = data['attachments'] 
+	    att = data['attachments']
+	    print(text)
+	    print(att)
 	    time.sleep(1)	    
 	    send_message(mock(text), att)
 	  
@@ -54,7 +56,7 @@ def send_message(msg, att):
   data = {
          'bot_id' : os.getenv('GROUPME_BOT_ID'),
          'text'   : msg,
-         'attachments' : att,
+         'attachments' : [att],
          }
   request = Request(url, urlencode(data).encode())
   json = urlopen(request).read().decode()
