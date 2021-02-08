@@ -20,7 +20,7 @@ def webhook():
 	  log('Recieved {}'.format(data))
 	  msg = ''
 	  #have Aaron, andres, jason, keaton
-	  if (data['name'] == 'Worlds BIGGEST Chiefs Fan'):
+	  if (data['sender_id'] == '35832035'):
 	    text = data['text']
 	    time.sleep(1)
 	    send_message(mock(text))
