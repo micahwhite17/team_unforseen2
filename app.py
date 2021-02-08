@@ -54,9 +54,9 @@ def mock(text, diversity_bias=0.5, random_seed=None):
 def send_message(msg, att):
   url  = 'https://api.groupme.com/v3/bots/post'
   data = {
-         'attachments' : [{'type' : 'image', 'url' : 'https://i.groupme.com/750x942.jpeg.92cf28a3cb4a499baeb242f12d0f1a21'}],
          'bot_id' : os.getenv('GROUPME_BOT_ID'),
          'text'   : 'testing',
+	 'picture_url' : 'https://i.groupme.com/750x942.jpeg.92cf28a3cb4a499baeb242f12d0f1a21',
          }
   print(data)
   request = Request(url, urlencode(data).encode())
