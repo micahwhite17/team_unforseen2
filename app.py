@@ -18,7 +18,7 @@ def webhook():
   if(ENABLED):
 	  data = request.get_json()
 	  log('Recieved {}'.format(data))
-          msg = ''
+	  msg = ''
 	  text = data['text']
           att = data['attachments']
           print(data['attachments'])
