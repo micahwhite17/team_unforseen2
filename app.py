@@ -22,7 +22,7 @@ def webhook():
 	  text = data['text']
 	  att = data['attachments']
 	  print(data['attachments'])
-	  img = data['attachments][0]['url']
+	  img = data['attachments'][0]['url']
           print(img)
 	  time.sleep(1)
 	  #if (data['sender_id'] == '35832035'):
