@@ -18,12 +18,12 @@ def webhook():
   if(ENABLED):
 	  data = request.get_json()
 	  log('Recieved {}'.format(data))
-	  msg = ''
+          msg = ''
 	  text = data['text']
-	  att = data['attachments']
-	  print(data['attachments'])
-	  img = data['attachments'][0]['url']
-          print(img)
+          att = data['attachments']
+          print(data['attachments'])
+          img = data['attachments'][0]['url']
+	  print(img)
 	  time.sleep(1)
 	  #if (data['sender_id'] == '35832035'):
 	  send_message(mock(text), att)
