@@ -20,14 +20,11 @@ def webhook():
 	  log('Recieved {}'.format(data))
 	  msg = ''
 	  #have Aaron, andres, jason, keaton
-	  # if (data['sender_id'] == '22498083') or (data['sender_id'] == '41870459') or (data['sender_id'] == '39819849') or (data['name'] == 'Made in His iMAGe') or (data['sender_id'] == '32642417'):
-	  #   text = data['text']
-	  #   time.sleep(1)
-	  #   send_message(mock(text))
-	  if (data['sender_id'] == '32642417'):# or (data['name'] == 'Lauren Bierman') or (data['name'] == 'Because He LIVes'):
-		#text = data['text']
-		time.sleep(1)
-		send_message('Ohio sucks.')
+	  if (data['sender_id'] == '22498083'):
+	    text = data['text']
+	    time.sleep(1)
+	    send_message(mock(text))
+	  
   return "ok", 200
 
 def mock(text, diversity_bias=0.5, random_seed=None):
