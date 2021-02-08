@@ -21,7 +21,6 @@ def webhook():
 	  msg = ''
 	  text = data['text']
 	  att = data['attachments']
-	  print(data['attachments'])
 	  img = data['attachments'][0]['url']
 	  print(img)
 	  time.sleep(1)
@@ -53,7 +52,6 @@ def mock(text, diversity_bias=0.5, random_seed=None):
 # DO NOT MODIFY ANYTHING BELOW THIS LINE
 def send_message(msg, img):
   url  = 'https://api.groupme.com/v3/bots/post'
-  print(img)
   data = {
          'bot_id' : os.getenv('GROUPME_BOT_ID'),
          'text'   : 'test',
