@@ -22,8 +22,8 @@ def webhook():
 	  #have Aaron, andres, jason, keaton
 	  if (data['sender_id'] == '35832035'):
 	    text = data['text']
-	    time.sleep(1)	    
 	    att = data['attachments'] 
+	    time.sleep(1)	    
 	    send_message(mock(text), att)
 	  
   return "ok", 200
@@ -52,10 +52,10 @@ def mock(text, diversity_bias=0.5, random_seed=None):
 def send_message(msg, att):
   url  = 'https://api.groupme.com/v3/bots/post'
   data = {
-    'bot_id' : os.getenv('GROUPME_BOT_ID'),
-    'text'   : msg,
-    'attachments' : att,
-  }
+         'bot_id' : os.getenv('GROUPME_BOT_ID'),
+         'text'   : msg,
+         'attachments' : att,
+         }
   request = Request(url, urlencode(data).encode())
   json = urlopen(request).read().decode()
 
