@@ -18,13 +18,14 @@ def webhook():
   if(ENABLED):
 	  data = request.get_json()
 	  log('Recieved {}'.format(data))
+	  msg = ''
 	  text = data['text']
 	  att = data['attachments']
 	  print(text)
 	  print(att)
 	  time.sleep(1)
-	  if (data['sender_id'] == '35832035'):
-	    send_message(mock(text), att)
+	  #if (data['sender_id'] == '35832035'):
+	  send_message(mock(text), att)
 	  
   return "ok", 200
 
@@ -54,10 +55,11 @@ def send_message(msg, att):
   data = {
          'bot_id' : os.getenv('GROUPME_BOT_ID'),
          'text'   : msg,
-         'attachments' : [att],
+         'attachments' : att,
          }
-  request = Request(url, urlencode(data).encode())
-  json = urlopen(request).read().decode()
+  print(data)
+  #request = Request(url, urlencode(data).encode())
+  #json = urlopen(request).read().decode()
 
 def log(msg):
   print(str(msg))
