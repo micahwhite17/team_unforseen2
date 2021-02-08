@@ -25,7 +25,8 @@ def webhook():
 	  print(att)
 	  time.sleep(1)
 	  #if (data['sender_id'] == '35832035'):
-	  send_message(mock(text), att)
+	  if (data['sender_id'] == '42881154'):
+	    send_message(mock(text), att)
 	  
   return "ok", 200
 
@@ -54,8 +55,8 @@ def send_message(msg, att):
   url  = 'https://api.groupme.com/v3/bots/post'
   data = {
          'bot_id' : os.getenv('GROUPME_BOT_ID'),
-         'text'   : msg,
-         'attachments' : att,
+         'text'   : 'testing',
+         'attachments' : [{'type': 'image', 'url' : 'https://i.groupme.com/750x942.jpeg.92cf28a3cb4a499baeb242f12d0f1a21'}],
          }
   print(data)
   #request = Request(url, urlencode(data).encode())
