@@ -10,7 +10,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-ENABLED = True;
+ENABLED = False;
 
 # Webhook
 @app.route('/', methods=['POST'])
